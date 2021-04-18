@@ -9,16 +9,15 @@ import countries from "../countries.json"
 function App() {
   return (
     <div className="App">
-      
-      <NavBar/>
-      <div className="container row col-5" >
-      <Route exact path="/">
-      <CountriesList /></Route>
-      {/* <Route path="/:countryName" component={CountryDetails}></Route> */}
-      </div>
+  <NavBar />
 
-
+  <div className="container">
+    <div className="row">
+      <CountriesList countries={countries} />
+      {/* React Router Route rendering the CountryDetails should go here */}
     </div>
+  </div>
+</div>
   );
 }
 
